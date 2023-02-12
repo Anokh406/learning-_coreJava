@@ -53,14 +53,24 @@ public class recuirson {
         PrintFibonacci(b, c, n - 1);
     }
 // Print x^n (stack hght = n)
+// public static int calculatePower(int x,int n){
+//     if(n==0){return 1;}
+//     if(x==0){return 0;}
+//     int power1=calculatePower(x,n-1);
+//     int power2=x*power1;
+//     return power2;
+
+// }
 public static int calculatePower(int x,int n){
     if(n==0){return 1;}
     if(x==0){return 0;}
-    int power1=calculatePower(x,n-1);
-    int power2=x*power1;
-    return power2;
-
-}
+    // if n is even
+    if(n% 2==0){
+        return calculatePower(x, n/2) * calculatePower(x, n/2);
+    }else{//if n is odd
+        return calculatePower(x, n/2) * calculatePower(x, n/2) *x;
+    }
+   }
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter the value of n :");
@@ -73,6 +83,6 @@ public static int calculatePower(int x,int n){
         // System.out.println(a);
         // System.out.println(b);
         // PrintFibonacci(a, b, n - 2);
-       System.out.println(calculatePower(25, 2)); 
+       System.out.println(calculatePower(2, 5)); 
     }
 }
