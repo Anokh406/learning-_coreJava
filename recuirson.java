@@ -52,7 +52,15 @@ public class recuirson {
         System.out.println(c);
         PrintFibonacci(b, c, n - 1);
     }
+// Print x^n (stack hght = n)
+public static int calculatePower(int x,int n){
+    if(n==0){return 1;}
+    if(x==0){return 0;}
+    int power1=calculatePower(x,n-1);
+    int power2=x*power1;
+    return power2;
 
+}
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter the value of n :");
@@ -62,8 +70,9 @@ public class recuirson {
         // printSum(1, 25, 0);
         // System.out.println(factorial(5));
         int a = 0, b = 1, n = 7;
-        System.out.println(a);
-        System.out.println(b);
-        PrintFibonacci(a, b, n - 2);
+        // System.out.println(a);
+        // System.out.println(b);
+        // PrintFibonacci(a, b, n - 2);
+       System.out.println(calculatePower(25, 2)); 
     }
 }
