@@ -29,7 +29,7 @@ public class recuirson {
         }
         sum += i;
         printSum(i + 1, n, sum);
-        System.err.println(i);
+        System.out.println(i);
     }
 
     // print a factorial of a number n?
